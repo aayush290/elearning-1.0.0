@@ -21,7 +21,7 @@
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
-r
+    r
     <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet" />
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
@@ -35,6 +35,8 @@ r
     <!--CSS for Exercise-->
     <style>
         body {
+            font-family: "Heebo", sans-serif;
+            font-size: 20px;
             background-color: #f0f0f0;
             margin-top: -25px;
         }
@@ -108,7 +110,7 @@ r
             background-color: #fff;
             border: 1px solid #ddd;
             border-radius: 5px;
-            padding: 10px;
+            padding: 20px;
             margin: 20px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
@@ -166,149 +168,460 @@ r
 
     <!-- Testimonial Start -->
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-      <!--Collapseable 1 Starts-->  
+        <!--Collapseable 1 Starts-->
         <div class="container">
             <!--Collapseable Content Starts-->
             <div class="collapsible" onclick="toggleCollapse(this)">AES Cryptography</div>
             <div class="content">
                 <h3>⇒ AES Cryptography</h3>
-                <p></p>
+                <p>AES (Advanced Encryption Standard) is like a secret code used to protect your digital information,
+                    such as
+                    passwords, messages, and files. It's like having a lock on your data that only the right key can
+                    open.
+                    AES is known for being really good at keeping your information safe from hackers because it's like
+                    having a
+                    super-strong lock with different-sized keys. It's used in many devices and apps to make sure your
+                    private stuff
+                    stays private.</p>
                 <div id="code-container">
                     <pre id="code">
 from cryptography.fernet import Fernet
-
-# Generate a random encryption key
-key = Fernet.generate_key()
             
+# Generate a random encryption key
+ key = Fernet.generate_key()
+                       
 # Create a Fernet cipher object with the key
 cipher_suite = Fernet(key)
-            
+                       
 # Get user input for the text to be encrypted
 plaintext = input("Enter the text to be encrypted: ").encode('utf-8')
-            
+                       
 # Encrypt the data
 cipher_text = cipher_suite.encrypt(plaintext)
-            
+                       
 print(f"Encryption Key: {key.decode('utf-8')}")
 print(f"Encrypted Text: {cipher_text.decode('utf-8')}")
-            
+                       
 # Decrypt the data
 decrypted_text = cipher_suite.decrypt(cipher_text)
-            
+                       
 print(f"Decrypted Text: {decrypted_text.decode('utf-8')}")
-            </pre>
+                    </pre>
                     <div id="buttons">
                         <button id="copy-button" class="button">Copy Code</button>
-                        <a href="https://replit.com/@believethataayu/AES-1" class="button">Execute Code</a>
+                        <a href="https://replit.com/@MuskanRauther/aes#main.py" class="button">Execute Code</a>
                     </div>
+
+                </div>
+                <div>
+                    <p> <br>This code is a simple example of encryption and decryption using the Fernet symmetric-key
+                        encryption scheme.
+                        Here's a layman's explanation of what it does:
+
+                        <br>1. Key Generation: It generates a random secret key. This key is like a special code that
+                        will be used
+                        to lock and unlock the message.
+
+                        <br>2. Encryption: You can enter a message, and the program takes that message and uses the
+                        secret key to
+                        jumble it up, making it unreadable to anyone who doesn't have the same key. This is like putting
+                        your
+                        message in a magic box and locking it with a secret key.
+
+                        <br>3. Display Key and Encrypted Text: It shows you the secret key (which you should keep really
+                        safe
+                        because it's the only way to unlock your message) and the jumbled-up message, which is the
+                        encrypted text.
+
+                        <br>4. Decryption: When you want to read the message again, the program uses the same secret key
+                        to unjumble
+                        it, so you get back your original message. It's like using the key to unlock the magic box and
+                        reveal what's
+                        inside.
+
+                        <br>In a nutshell, this code lets you turn a message into a secret code that only you can decode
+                        with the right
+                        key.
+                    </p>
                 </div>
             </div>
             <!--Collapseable Content Ends-->
         </div>
-      <!--Collapseable 1 ends-->
+        <!--Collapseable 1 ends-->
 
-        <!--Collapseable 2 Starts-->  
-            <div class="container">
-                <!--Collapseable Content Starts-->
-                <div class="collapsible" onclick="toggleCollapse(this)">DES Cryptography</div>
-                <div class="content">
-                    <h3>⇒ DES Cryptography</h3>
-                    <p></p>
-                    <div id="code-container">
-                        <pre id="code">
+        <!--Collapseable 2 Starts-->
+        <div class="container">
+            <!--Collapseable Content Starts-->
+            <div class="collapsible" onclick="toggleCollapse(this)">DES Cryptography</div>
+            <div class="content">
+                <h3>⇒ DES Cryptography</h3>
+                <p>DES (Data Encryption Standard) is like an old lock for your digital information. It uses a secret key
+                    to scramble
+                    your data, making it hard for others to understand. However, over time, it's become easier for
+                    modern hackers to
+                    break into this old lock. So, it's like having an older lock on your data that might not be as
+                    secure as newer
+                    ones like AES. While it was once widely used, it's not the best choice for protecting sensitive
+                    information
+                    today.</p>
+                <div id="code-container">
+                    <pre id="code">
 from Crypto.Cipher import DES
 from Crypto.Random import get_random_bytes
-                                
+
 # Generate a random 8-byte key for DES
 key = get_random_bytes(8)
-                                
+
 # Create a DES cipher object with the key and using ECB mode
 cipher = DES.new(key, DES.MODE_ECB)
-                                
+
 # Get user input for the text to be encrypted
 plaintext = input("Enter the text to be encrypted: ")
-                                
+
 # Ensure the plaintext is a multiple of 8 bytes (DES block size)
 if len(plaintext) % 8 != 0:
-     padding_length = 8 - len(plaintext) % 8
-     plaintext += ' ' * padding_length
-                            
+    padding_length = 8 - len(plaintext) % 8
+    plaintext += ' ' * padding_length
+
 plaintext_bytes = plaintext.encode('utf-8')
-                            
+
 # Encrypt the data
 cipher_text = cipher.encrypt(plaintext_bytes)
-                            
+
 print(f"Encryption Key: {key.hex()}")
 print(f"Encrypted Text (in hex): {cipher_text.hex()}")
-                            
+
 # Decrypt the data
 decrypted_bytes = cipher.decrypt(cipher_text)
-                            
+
 # Remove any padding added during encryption
 decrypted_text = decrypted_bytes.rstrip(b' ').decode('utf-8')
-                            
+
 print(f"Decrypted Text: {decrypted_text}")
-                </pre>
-                        <div id="buttons">
-                            <button id="copy-button" class="button">Copy Code</button>
-                            <a href="https://replit.com/@believethataayu/AES-1" class="button">Execute Code</a>
-                        </div>
+        </pre>
+                    <div id="buttons">
+                        <button id="copy-button" class="button">Copy Code</button>
+                        <a href="https://replit.com/@MuskanRauther/des#main.py" class="button">Execute Code</a>
                     </div>
                 </div>
-                <!--Collapseable Content Ends-->
+                <div>
+                    <p><br>This code is like a secure envelope for your messages. Here's a simplified explanation:
+
+                        <br> 1. Key Generation: It creates a secret key (like a magic key) that's 8 bytes long. This key
+                        will be used
+                        to lock and unlock your message.
+
+                        <br> 2. Encryption: You enter a message, and this program uses the secret key to scramble it
+                        into gibberish.
+                        It's like putting your message in a locked box.
+
+                        <br> 3. Ensuring Block Size: DES works in blocks of 8 bytes, so if your message isn't exactly 8
+                        bytes long,
+                        it adds spaces to make it fit. This ensures everything is in the right-sized box.
+
+                        <br> 4. Displaying Key and Encrypted Text: It shows you the secret key (keep it super safe!) and
+                        the
+                        scrambled message in a special way (in hexadecimal format).
+
+                        <br> 5. Decryption: When you want to read the message, you use the same secret key to unscramble
+                        it. It's
+                        like using the magic key to unlock the box and reveal your original message.
+
+                        In short, this code turns your message into a secure, locked box that only you can open with the
+                        right key.
+                    </p>
+                </div>
             </div>
+            <!--Collapseable Content Ends-->
+        </div>
         <!--Collapseable 2 ends-->
-        
-        <!--Collapseable 3 Starts-->  
-              <div class="container">
-                <!--Collapseable Content Starts-->
-                <div class="collapsible" onclick="toggleCollapse(this)">Substitution Cipher</div>
-                <div class="content">
-                    <h3>⇒ Substitution Cipher</h3>
-                    <p></p>
-                    <div id="code-container">
-                        <pre id="code">
-import string
+
+        <!--Collapseable 3 Starts-->
+        <div class="container">
+            <!--Collapseable Content Starts-->
+            <div class="collapsible" onclick="toggleCollapse(this)">Substitution Cipher</div>
+            <div class="content">
+                <h3>⇒ Substitution cipher</h3>
+                <p>A substitution cipher is like a secret code where each letter in your message gets replaced with
+                    another letter.
+                    For example, "A" might become "B," "B" might become "C," and so on. This jumbles up your message to
+                    hide what
+                    you're saying. It's like having a secret language where only you and the person you're talking to
+                    understand how
+                    to decode the message. However, these types of codes can be pretty easy for someone else to figure
+                    out if they
+                    know the pattern, so they're not very secure for important secrets.</p>
+                <div id="code-container">
+                    <pre id="code">
+            import string
 
 # Define the substitution alphabet (key)
 def create_substitution_key(shift):
     alphabet = string.ascii_lowercase
     shifted_alphabet = alphabet[shift:] + alphabet[:shift]
     return str.maketrans(alphabet, shifted_alphabet)
-                            
+
 # Function to encrypt plaintext
 def encrypt(plaintext, shift):
     substitution_key = create_substitution_key(shift)
     return plaintext.translate(substitution_key)
-                            
+
 # Function to decrypt ciphertext
 def decrypt(ciphertext, shift):
     substitution_key = create_substitution_key(-shift)
     return ciphertext.translate(substitution_key)
-                            
+
 # Get user input for the text and shift value
 plaintext = input("Enter the text to be encrypted: ").lower()
-hift = int(input("Enter the shift value (integer): "))
-                            
+shift = int(input("Enter the shift value (integer): "))
+
 # Encrypt the data
 cipher_text = encrypt(plaintext, shift)
-                            
+
 print(f"Encrypted Text: {cipher_text}")
-                            
+
 # Decrypt the data
 decrypted_text = decrypt(cipher_text, shift)
-                            
+
 print(f"Decrypted Text: {decrypted_text}")
-                </pre>
-                        <div id="buttons">
-                            <button id="copy-button" class="button">Copy Code</button>
-                            <a href="https://replit.com/@believethataayu/AES-1" class="button">Execute Code</a>
-                        </div>
+        </pre>
+                    <div id="buttons">
+                        <button id="copy-button" class="button">Copy Code</button>
+                        <a href="https://replit.com/@MuskanRauther/substitution#main.py" class="button">Execute Code</a>
                     </div>
                 </div>
-                <!--Collapseable Content Ends-->
+                <div>
+                    <p><br>This code is like a secret language where each letter is replaced with another letter, and
+                        only those who
+                        know the secret can understand it. Here's a simplified explanation:
+
+                        <br>1. Substitution Alphabet (Key): The code defines a secret substitution alphabet (key) that
+                        shifts
+                        letters in the regular alphabet by a certain number of positions. For example, if the shift
+                        value is 3, 'a'
+                        becomes 'd,' 'b' becomes 'e,' and so on.
+
+                        <br>2. Encryption: You enter a message, and the program replaces each letter with its secret
+                        counterpart
+                        based on the shift value. It's like writing your message in a secret code where 'a' becomes 'd'
+                        (if the
+                        shift is 3).
+
+                        <br>3. Decryption: To understand the message, you need to know the same secret shift value. The
+                        program can
+                        decode the message by shifting the letters back to their original positions.
+
+                        <br>4. User Input: You enter the message you want to encrypt and the shift value. It could be
+                        something like
+                        "Hello, world!" and a shift of 3.
+
+                        <br>5. Display: The code shows you the encrypted message (the one with shifted letters) and then
+                        decrypts it
+                        to reveal the original message.
+
+                        <br>In simple terms, this code turns your message into a secret code by shifting the letters,
+                        and you can decode
+                        it if you know the secret shift value. It's like having your own secret language.
+                    </p>
+
+                </div>
             </div>
-        <!--Collapseable 3 ends-->
+        </div>
+        <!--Collapseable Content Ends-->
+
+        <!--Collapseable 4 Starts-->
+        <div class="container">
+        <!--Collapseable Content Starts-->
+        <div class="collapsible" onclick="toggleCollapse(this)">Caesar Cipher</div>
+        <div class="content">
+            <h3>⇒ Caesar Cipher </h3>
+            <p>Caesar Cipher is like a secret code that shifts letters in a message by a certain number. For example, if
+                you
+                shift by 3, "A" becomes "D," "B" becomes "E," and so on. It's like a simple letter substitution game.
+                It's not
+                super secure because someone could figure it out if they try different shifts, but it's a fun way to
+                hide
+                messages from curious eyes.</p>
+            <div id="code-container">
+                <pre id="code">
+    def caesar_encrypt(text, shift):
+    encrypted_text = ""
+    for char in text:
+        if char.isalpha():
+            is_upper = char.isupper()
+            char = char.lower()
+            shifted = ord(char) + shift
+            if shifted > ord('z'):
+                shifted -= 26
+            encrypted_text += chr(shifted).upper() if is_upper else chr(shifted)
+        else:
+            encrypted_text += char
+    return encrypted_text
+
+def caesar_decrypt(encrypted_text, shift):
+    decrypted_text = ""
+    for char in encrypted_text:
+        if char.isalpha():
+            is_upper = char.isupper()
+            char = char.lower()
+            shifted = ord(char) - shift
+            if shifted < ord('a'):
+                shifted += 26
+            decrypted_text += chr(shifted).upper() if is_upper else chr(shifted)
+        else:
+            decrypted_text += char
+    return decrypted_text
+
+# Get user input
+message = input("Enter a message: ")
+shift = int(input("Enter the Caesar Cipher shift value (e.g., 3): "))
+
+# Encrypt the message
+encrypted_message = caesar_encrypt(message, shift)
+print("Encrypted Message:", encrypted_message)
+
+# Decrypt the message
+decrypted_message = caesar_decrypt(encrypted_message, shift)
+print("Decrypted Message:", decrypted_message)
+
+        </pre>
+                <div id="buttons">
+                    <button id="copy-button" class="button">Copy Code</button>
+                    <a href="https://replit.com/@MuskanRauther/vignere#main.py" class="button">Execute Code</a>
+                </div>
+            </div>
+            <div>
+                <p><br>This code is like a simple way to turn your message into a secret code and then decode it. It
+                    uses a
+                    technique called the Caesar Cipher. Here's a simplified explanation:
+
+                    <br>1. Encryption: You enter a message and a number (like 3). The program takes each letter in your
+                    message
+                    and shifts it forward in the alphabet by that number. For example, 'A' becomes 'D,' 'B' becomes 'E,'
+                    and so
+                    on.
+
+                    <br>2. Decryption: To understand the message, you need to know the same number (in this case, 3).
+                    The
+                    program reverses the shift to reveal the original message.
+
+                    <br>3. User Input: You enter the message you want to encrypt (like "HELLO") and the number (like 3).
+
+                    <br>4. Display: The code shows you the encrypted message (the one with shifted letters), and then it
+                    decrypts it to reveal the original message.
+
+                    <br>In simple terms, it's like shifting your letters in the alphabet by a secret number. You can
+                    shift them back
+                    with the same number to read the message. It's like a simple secret code you and your friend can
+                    use.
+                </p>
+
+
+            </div>
+        </div>
+        <!--Collapseable Content Ends-->
+        </div>
+        <!--Collapseable 4 ends-->
+
+        <!--Collapseable 4 Starts-->
+        <div class="container">
+            <!--Collapseable Content Starts-->
+            <div class="collapsible" onclick="toggleCollapse(this)">Vigenère cipher</div>
+            <div class="content">
+                <h3>⇒ Vigenère cipher</h3>
+    <p>The Vigenère cipher is like a more advanced secret code for your messages. Instead of just shifting letters like
+        a simple substitution cipher, it uses a secret keyword to change how the letters are scrambled. This makes it
+        much harder to figure out the code. It's like having a secret codebook with different rules for each part of
+        your message, and only you and the person you're communicating with know the rules. While it's more secure than
+        simple ciphers, determined code-breakers can still crack it with enough effort.</p>
+    <div id="code-container">
+        <pre id="code">
+# Function to encrypt plaintext using the Vigenère cipher
+def encrypt(plaintext, key):
+    encrypted_text = ""
+    key_length = len(key)
+    for i in range(len(plaintext)):
+        char = plaintext[i]
+        if char.isalpha():
+            shift = ord(key[i % key_length].upper()) - ord('A')
+            if char.isupper():
+                encrypted_char = chr(((ord(char) - ord('A') + shift) % 26) + ord('A'))
+            else:
+                encrypted_char = chr(((ord(char) - ord('a') + shift) % 26) + ord('a'))
+            encrypted_text += encrypted_char
+        else:
+            encrypted_text += char
+    return encrypted_text
+
+# Function to decrypt ciphertext using the Vigenère cipher
+def decrypt(ciphertext, key):
+    decrypted_text = ""
+    key_length = len(key)
+    for i in range(len(ciphertext)):
+        char = ciphertext[i]
+        if char.isalpha():
+            shift = ord(key[i % key_length].upper()) - ord('A')
+            if char.isupper():
+                decrypted_char = chr(((ord(char) - ord('A') - shift) % 26) + ord('A'))
+            else:
+                decrypted_char = chr(((ord(char) - ord('a') - shift) % 26) + ord('a'))
+            decrypted_text += decrypted_char
+        else:
+            decrypted_text += char
+    return decrypted_text
+
+# Get user input for the text and encryption key
+plaintext = input("Enter the text to be encrypted: ")
+encryption_key = input("Enter the Vigenère cipher key: ")
+
+# Encrypt the data
+cipher_text = encrypt(plaintext, encryption_key)
+
+print(f"Encrypted Text: {cipher_text}")
+
+# Decrypt the data
+decrypted_text = decrypt(cipher_text, encryption_key)
+
+print(f"Decrypted Text: {decrypted_text}")
+        </pre>
+        <div id="buttons">
+            <button id="copy-button" class="button">Copy Code</button>
+            <a href="https://replit.com/@MuskanRauther/vigenere#main.py" class="button">Execute Code</a>
+        </div>
+    </div>
+    <div>
+        <p><br>This code is like a secret method to encrypt and decrypt messages using a special keyword. Here's a
+            simplified explanation:
+
+            <br>1. Keyword: You choose a secret keyword, like "SECRET." This keyword is like a secret codebook.
+
+            <br>2. Encryption: You enter a message and the keyword. The program uses the keyword to shift each letter in
+            your message. For example, if your keyword is "SECRET," and your message is "HELLO," it shifts 'H' by 'S,'
+            'E' by 'E,' and so on. This creates a secret code.
+
+            <br>3. Decryption: To understand the message, you need the same keyword. The program reverses the shifting
+            to reveal the original message.
+
+            <br>4. User Input: You enter the message you want to encrypt and the secret keyword. For example, "HELLO"
+            and "SECRET."
+
+            <br> 5. Display: The code shows you the encrypted message (the one with shifted letters) and then decrypts it
+            to reveal the original message.
+
+            <br>In simple terms, this code uses a secret keyword to scramble your message, and you can unscramble it with
+            the same keyword. It's like having your own secret language, and the keyword is your key to read and write
+            messages in that language.</p>
+            </div>
+
+            </div>
+            <!--Collapseable Content Ends-->
+            </div>
+            <!--Collapseable 4 ends-->
+
+
+    </div>
+    <!--Collapseable 3 ends-->
+
     </div>
     <!-- Testimonial End -->
 
