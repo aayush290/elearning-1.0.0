@@ -474,12 +474,54 @@ into the world of online security.
                 <!-- Add more content as needed -->
             </section>
             <br/>
-            <section id="section6">
+            <!-- <section id="section6">
                 <h1>Assessment</h1>
                 <embed src= "assessment.pdf" width="800" height="500">
                 <img src="section3-image.jpg" alt="Section 3 Image">
-                <!-- Add more content as needed -->
-            </section>
+               
+            </section> -->
+            <!--QUIZS-->
+            <style>
+                
+                #start-button {
+                  background-color: #4CAF50;
+                  color: #fff;
+                  border: none;
+                  border-radius: 10px;
+                  padding: 15px 30px;
+                  font-size: 1.2rem;
+                  cursor: pointer;
+                  transition: background-color 0.3s;
+                  animation: bounce 2s infinite;
+                }
+            
+                #start-button:hover {
+                  background-color: #45a049;
+                }
+            
+                @keyframes bounce {
+                  0%, 20%, 50%, 80%, 100% {
+                    transform: translateY(0);
+                  }
+                  40% {
+                    transform: translateY(-20px);
+                  }
+                  60% {
+                    transform: translateY(-10px);
+                  }
+                }
+              </style>
+              <button id="start-button">Start Quiz</button>
+
+              <script>
+                const startButton = document.getElementById("start-button");
+            
+                startButton.addEventListener("click", () => {
+                  // Redirect to the quiz page or perform any action to start the quiz
+                  window.location.href = "quiz.html"; // Replace with the actual quiz page URL
+                });
+              </script>
+            <!--QUIZE-->
             <br/>
             <!-- Add more sections as needed -->
         </div>

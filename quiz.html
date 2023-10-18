@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>eLEARNING - eLearning HTML Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600&family=Nunito:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        /* Sidebar styles */
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            width: 25%;
+            background-color: #f2f2f2;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+        }
+
+        .course-menu ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .course-menu li {
+            margin-bottom: 10px;
+        }
+
+        /* Content styles */
+        .content {
+            width: 75%;
+            padding: 20px;
+        }
+
+        /* Progress bar styles */
+        .progress-bar {
+            height: 20px;
+            background-color: #ccc;
+            margin-top: 20px;
+        }
+
+        .progress {
+            height: 100%;
+            width: 0;
+            background-color: #007bff;
+        }
+
+        /* Adjustments to avoid overlap */
+        .navbar {
+            z-index: 1;
+        }
+
+        .footer {
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center px-4 px-lg-5">
+            <h2 class="m-0 text-primary"><i class="fa fa-book me-3"></i>Satish Tutorials</h2>
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About</a>
+                <a href="courses.html" class="nav-item nav-link active">Courses</a>
+                <a href="exercise.html" class="nav-item nav-link">Exercise</a>
+                <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Header Start -->
+    <div class="container-fluid bg-primary py-5 mb-5 page-header">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center">
+                    <h1 class="display-3 text-white animated slideInDown">Cybersecurity for Home and Small Business</h1>
+                    <nav aria-label="breadcrumb">
+                        <p class="text-white">This comprehensive online course is specifically designed to empower
+                            individuals and small business owners with the knowledge and skills necessary to protect
+                            personal information and valuable assets from cyber threats. Explore practical cybersecurity
+                            strategies tailored to the unique needs of home and small business environments. With a
+                            duration of 10 hours, you'll delve into key topics that will enhance your digital security
+                            and fortify your online presence. </p>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+ <!--QUIZ start-->
+ <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+    }
+
+    .quiz-container {
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px;
+      border: 2px solid #06BBCC;
+      background-color: #fff;
+      box-shadow: 0 0 20px #007bff;
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: #333;
+      text-align: center;
+    }
+
+    .question {
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      margin: 5px 0;
+      cursor: pointer;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    label:hover {
+      background-color: #06BBCC;
+      color: #fff;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    #submit-button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      background-color: #06BBCC;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #submit-button:hover {
+      background-color: #181d38;
+    }
+
+    #results {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 20px;
+      font-size: 1.2em;
+    }
+
+    .correct {
+      background-color: #4CAF50;
+      color: #fff;
+    }
+
+    .incorrect {
+      background-color: #FF5722;
+      color: #fff;
+    }
+
+    .selected-correct {
+      background-color: #4CAF50;
+      color: #fff;
+    }
+
+    .selected-incorrect {
+      background-color: #FF5722;
+      color: #fff;
+    }
+  </style>
+ <div class="quiz-container">
+    <h2 class=text-primary>QUIZ</h2>
+    <div id="questions">
+      <!-- Questions will be dynamically generated here using JavaScript -->
+    </div>
+    <button id="submit-button">Submit Quiz</button>
+    <div id="results"></div>
+  </div>
+
+  <script>
+    const quizQuestions = [
+      {
+        question: "Scenario: An employee at Suraksha Rakshakah receives an email claiming to be from their bank, asking for personal information. What type of threat is this?",
+        options: ["A. Malware", "B. Phishing", "C. Firewall", "D. Encryption"],
+        correctAnswer: "B. Phishing",
+      },
+      {
+        question: "Scenario: Suraksha Rakshakah has suffered a data breach, and sensitive customer information was exposed. What regulation might require the company to report this incident to affected individuals and authorities?",
+        options: ["A. HIPAA", "B. PCI DSS", "C. GDPR", "D. CCPA"],
+        correctAnswer: "C. GDPR",
+      },
+      {
+        question: "Scenario: An employee's laptop at Suraksha Rakshakah was stolen. What data protection measure would have been most effective in this situation?",
+        options: ["A. Data in transit encryption", "B. Data at rest encryption", "C. Multi-Factor Authentication (MFA)", "D. Firewall"],
+        correctAnswer: "B. Data at rest encryption",
+      },
+      {
+        question: "Scenario: You, as the cybersecurity officer at Suraksha Rakshakah, receive a message on your social media account from an unknown person with a link to a suspicious website. What should you do?",
+        options: ["A. Click the link to see what it's about.", "B. Ignore the message.", "C. Report the message as spam or suspicious.", "D. Reply with your personal information to learn more."],
+        correctAnswer: "C. Report the message as spam or suspicious",
+      },
+      {
+        question: "Scenario: Suraksha Rakshakah has detected a sudden increase in network traffic, potentially indicating a cyber attack. What type of network threat might this be?",
+        options: ["A. Phishing", "B. DoS (Denial of Service)", "C. Ransomware", "D. Firewall breach"],
+        correctAnswer: "B. DoS (Denial of Service)",
+      },
+      {
+        question: "Scenario: An employee's smartphone at Suraksha Rakshakah has facial recognition and fingerprint scanning enabled for unlocking. What authentication methods are being used?",
+        options: ["A. Multi-Factor Authentication (MFA)", "B. Token-Based Authentication", "C. Biometric Authentication", "D. Password-Based Authentication"],
+        correctAnswer: "C. Biometric Authentication",
+      },
+      {
+        question: "Scenario: During a security awareness training session at Suraksha Rakshakah, an employee is asked to define 'phishing.' What is the correct definition?",
+        options: ["A. A type of malware that encrypts files and demands a ransom.", "B. An attempt to deceive individuals into revealing sensitive information by impersonating a trustworthy entity.", "C. The act of gaining unauthorized access to a computer system.", "D. A type of firewall designed to block malicious websites."],
+        correctAnswer: "B. An attempt to deceive individuals into revealing sensitive information by impersonating a trustworthy entity.",
+      },
+      {
+        question: "Scenario: You, as the cybersecurity officer at Suraksha Rakshakah, receive an email from a coworker with a link to a shared document. However, you find the email suspicious. What should you do?",
+        options: ["A. Click the link and open the document.", "B. Forward the email to your entire department.", "C. Verify with your coworker through a different communication channel if they sent the email.", "D. Delete the email without taking any action."],
+        correctAnswer: "C. Verify with your coworker through a different communication channel if they sent the email.",
+      },
+      {
+        question: "Scenario: Suraksha Rakshakah stores medical records for patients. What regulation is most relevant to protecting the privacy and security of this data?",
+        options: ["A. CCPA", "B. PCI DSS", "C. GDPR", "D. HIPAA"],
+        correctAnswer: "D. HIPAA",
+      },
+      {
+        question: "Scenario: Suraksha Rakshakah's network experiences a sudden surge in traffic, causing system slowdowns and disruptions. Employees report that they are unable to access critical resources. As the cybersecurity officer, what type of cyber threat should you suspect, and what immediate action should you take?",
+        options: ["A. Suspect a malware attack and immediately disconnect affected devices from the network.", "B. Suspect a phishing attempt and inform all employees to change their passwords.", "C. Suspect a Distributed Denial of Service (DDoS) attack and collaborate with your Internet Service Provider (ISP) to mitigate it.", "D. Suspect a firewall breach and initiate a system-wide lockdown."],
+        correctAnswer: "C. Suspect a Distributed Denial of Service (DDoS) attack and collaborate with your Internet Service Provider (ISP) to mitigate it.",
+      },
+      ];
+      // ... (other questions)
+
+    const questionsContainer = document.getElementById("questions");
+    const submitButton = document.getElementById("submit-button");
+    const resultsContainer = document.getElementById("results");
+
+    // Generate the quiz questions
+    quizQuestions.forEach((quiz, index) => {
+      const questionDiv = document.createElement("div");
+      questionDiv.classList.add("question");
+      questionDiv.textContent = `Question ${index + 1}: ${quiz.question}`;
+      
+      const optionsDiv = document.createElement("div");
+      optionsDiv.classList.add("options");
+      quiz.options.forEach((option, optionIndex) => {
+        const optionLabel = document.createElement("label");
+        optionLabel.innerHTML = `<input type="radio" name="q${index}" value="${option}"> ${option}`;
+        optionsDiv.appendChild(optionLabel);
+      });
+      
+      questionsContainer.appendChild(questionDiv);
+      questionsContainer.appendChild(optionsDiv);
+    });
+
+    // Event listener for the submit button
+    submitButton.addEventListener("click", () => {
+      const userAnswers = [];
+      quizQuestions.forEach((quiz, index) => {
+        const selectedOption = document.querySelector(`input[name="q${index}"]:checked`);
+        if (selectedOption) {
+          userAnswers.push(selectedOption);
+        }
+      });
+
+      // Calculate the score and display results
+      let score = 0;
+      userAnswers.forEach((selectedOption, index) => {
+        const correctAnswer = quizQuestions[index].correctAnswer;
+        if (selectedOption.value === correctAnswer) {
+          selectedOption.parentElement.classList.add("selected-correct");
+          score++;
+        } else {
+          selectedOption.parentElement.classList.add("selected-incorrect");
+        }
+      });
+
+      resultsContainer.innerHTML = `Your score: ${score} out of ${quizQuestions.length}`;
+    });
+  </script>
+ 
+ <!--QUIZ end-->
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 mt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Quick Link</h4>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Privacy Policy</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">FAQs & Help</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Contact</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Gallery</h4>
+                    <div class="row g-2 pt-2">
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-2.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-3.jpg" alt="">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid bg-light p-1" src="img/course-1.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-white mb-3">Newsletter</h4>
+                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button"
+                            class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a><br><br>
+                        Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <a href="">Home</a>
+                            <a href="">Cookies</a>
+                            <a href="">Help</a>
+                            <a href="">FQAs</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const progressBar = document.querySelector('.progress');
+            const sections = document.querySelectorAll('section');
+            const sectionOffsets = Array.from(sections).map(section =>
+                section.offsetTop
+            );
+
+            function updateProgressBar() {
+                const windowHeight = window.innerHeight;
+                const docHeight = document.documentElement.scrollHeight;
+
+                const scrollTop = window.scrollY || window.pageYOffset;
+                const maxScrollTop = docHeight - windowHeight;
+
+                const scrollPercent = (scrollTop / maxScrollTop) * 100;
+
+                progressBar.style.width = scrollPercent + '%';
+            }
+
+            window.addEventListener('scroll', updateProgressBar);
+        });
+    </script>
+</body>
+
+</html>
