@@ -1,129 +1,199 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Quiz</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Security Education</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <style>
-    .quiz-container {
-      width: 80%;
+    /* Global styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
       margin: 0 auto;
       padding: 20px;
-      border: 1px solid #ccc;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
     }
-    .question {
-      font-weight: bold;
+
+    .card-container {
+      width: 300px;
+      height: 350px;
+      margin: 20px;
+      perspective: 1000px;
     }
-    .options {
+
+    .card {
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.5s;
+    }
+
+    .card:hover {
+      transform: rotateY(180deg);
+    }
+
+    .front,
+    .back {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      backface-visibility: hidden;
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      background-color: #fff;
+      text-align: center;
     }
-    #submit-button {
-      margin-top: 10px;
+
+    .back {
+      transform: rotateY(180deg);
+      background-color: #3f51b5;
+      color: #fff;
+    }
+
+    /* Icon styles */
+    .icon {
+      font-size: 48px;
+      margin-bottom: 10px;
+      color: #3f51b5;
     }
   </style>
 </head>
 <body>
-  <div class="quiz-container">
-    <h2>QUIZ</h2>
-    <div id="questions">
-      <!-- Questions will be dynamically generated here using JavaScript -->
+  <center><h1>Welcome to Online Security Education</h1></center>
+  <div class="container">
+
+    <!-- Card 1: Understanding the Threat Landscape -->
+    <div class="card-container">
+      <div class="card">
+        <div class="front">
+          <div class="card-content">
+            <i class="fas fa-globe icon"></i>
+            <h2>Understanding the Threat Landscape</h2>
+          </div>
+        </div>
+        <div class="back">
+          <div class="card-content">
+            <p>Discover the cyber threats that lurk in the digital world and learn to protect yourself.</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <button id="submit-button">Submit Quiz</button>
-    <div id="results"></div>
+<br>
+    <!-- Card 2: Types of Cyber Threats -->
+    <div class="card-container">
+      <div class="card">
+        <div class="front">
+          <div class="card-content">
+            <i class="fas fa-virus icon"></i>
+            <h2>Types of Cyber Threats</h2>
+          </div>
+        </div>
+        <div class="back">
+          <div class="card-content">
+            <p>Explore various threats like viruses, malware, phishing, and more, and how they affect online security.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3: Meet the Attackers -->
+    <div class="card-container">
+      <div class="card">
+        <div class="front">
+          <div class="card-content">
+            <i class="fas fa-user-secret icon"></i>
+            <h2>Meet the Attackers</h2>
+          </div>
+        </div>
+        <div class="back">
+          <div class="card-content">
+            <p>Unveil the world of cyber attackers, from individuals to nation-states, and understand their motivations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4: Potential Targets -->
+    <div class="card-container">
+      <div class="card">
+        <div class="front">
+          <div class="card-content">
+            <i class="fas fa-bullseye icon"></i>
+            <h2>Potential Targets</h2>
+          </div>
+        </div>
+        <div class="back">
+          <div class="card-content">
+            <p>Learn how anyone using the internet can become a potential target for cyber threats.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5: Cyberattack Methods -->
+    <div class="card-container">
+      <div class="card">
+        <div class="front">
+          <div class="card-content">
+            <i class="fas fa-code icon"></i>
+            <h2>Cyberattack Methods</h2>
+          </div>
+        </div>
+        <div class="back">
+          <div class="card-content">
+            <p>Discover the methods used by cybercriminals, from software vulnerabilities to social engineering.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6: Consequences of Cyberattacks -->
+    <div class="card-container">
+      <div class="card">
+        <div class="front">
+          <div class="card-content">
+            <i class="fas fa-exclamation icon"></i>
+            <h2>Consequences of Cyberattacks</h2>
+          </div>
+        </div>
+        <div class="back">
+          <div class="card-content">
+            <p>See the real-world impact of cyberattacks, including financial loss and identity theft.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 7: Secure Online Practices -->
+    <div class="card-container">
+      <div class="card">
+        <div class="front">
+          <div class="card-content">
+            <i class="fas fa-shield-alt icon"></i>
+            <h2>Secure Online Practices</h2>
+          </div>
+        </div>
+        <div class="back">
+          <div class="card-content">
+            <p>Learn how to protect personal information, maintain financial security, and prevent identity theft.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <script>
-    const quizQuestions = [
-    {
-        question: "Scenario: An employee at Suraksha Rakshakah receives an email claiming to be from their bank, asking for personal information. What type of threat is this?",
-        options: ["A. Malware", "B. Phishing", "C. Firewall", "D. Encryption"],
-        correctAnswer: "B. Phishing",
-      },
-      {
-        question: "Scenario: Suraksha Rakshakah has suffered a data breach, and sensitive customer information was exposed. What regulation might require the company to report this incident to affected individuals and authorities?",
-        options: ["A. HIPAA", "B. PCI DSS", "C. GDPR", "D. CCPA"],
-        correctAnswer: "C. GDPR",
-      },
-      {
-        question: "Scenario: An employee's laptop at Suraksha Rakshakah was stolen. What data protection measure would have been most effective in this situation?",
-        options: ["A. Data in transit encryption", "B. Data at rest encryption", "C. Multi-Factor Authentication (MFA)", "D. Firewall"],
-        correctAnswer: "B. Data at rest encryption",
-      },
-      {
-        question: "Scenario: You, as the cybersecurity officer at Suraksha Rakshakah, receive a message on your social media account from an unknown person with a link to a suspicious website. What should you do?",
-        options: ["A. Click the link to see what it's about.", "B. Ignore the message.", "C. Report the message as spam or suspicious.", "D. Reply with your personal information to learn more."],
-        correctAnswer: "C. Report the message as spam or suspicious",
-      },
-      {
-        question: "Scenario: Suraksha Rakshakah has detected a sudden increase in network traffic, potentially indicating a cyber attack. What type of network threat might this be?",
-        options: ["A. Phishing", "B. DoS (Denial of Service)", "C. Ransomware", "D. Firewall breach"],
-        correctAnswer: "B. DoS (Denial of Service)",
-      },
-      {
-        question: "Scenario: An employee's smartphone at Suraksha Rakshakah has facial recognition and fingerprint scanning enabled for unlocking. What authentication methods are being used?",
-        options: ["A. Multi-Factor Authentication (MFA)", "B. Token-Based Authentication", "C. Biometric Authentication", "D. Password-Based Authentication"],
-        correctAnswer: "C. Biometric Authentication",
-      },
-      {
-        question: "Scenario: During a security awareness training session at Suraksha Rakshakah, an employee is asked to define 'phishing.' What is the correct definition?",
-        options: ["A. A type of malware that encrypts files and demands a ransom.", "B. An attempt to deceive individuals into revealing sensitive information by impersonating a trustworthy entity.", "C. The act of gaining unauthorized access to a computer system.", "D. A type of firewall designed to block malicious websites."],
-        correctAnswer: "B. An attempt to deceive individuals into revealing sensitive information by impersonating a trustworthy entity.",
-      },
-      {
-        question: "Scenario: You, as the cybersecurity officer at Suraksha Rakshakah, receive an email from a coworker with a link to a shared document. However, you find the email suspicious. What should you do?",
-        options: ["A. Click the link and open the document.", "B. Forward the email to your entire department.", "C. Verify with your coworker through a different communication channel if they sent the email.", "D. Delete the email without taking any action."],
-        correctAnswer: "C. Verify with your coworker through a different communication channel if they sent the email.",
-      },
-      {
-        question: "Scenario: Suraksha Rakshakah stores medical records for patients. What regulation is most relevant to protecting the privacy and security of this data?",
-        options: ["A. CCPA", "B. PCI DSS", "C. GDPR", "D. HIPAA"],
-        correctAnswer: "D. HIPAA",
-      },
-      {
-        question: "Scenario: Suraksha Rakshakah's network experiences a sudden surge in traffic, causing system slowdowns and disruptions. Employees report that they are unable to access critical resources. As the cybersecurity officer, what type of cyber threat should you suspect, and what immediate action should you take?",
-        options: ["A. Suspect a malware attack and immediately disconnect affected devices from the network.", "B. Suspect a phishing attempt and inform all employees to change their passwords.", "C. Suspect a Distributed Denial of Service (DDoS) attack and collaborate with your Internet Service Provider (ISP) to mitigate it.", "D. Suspect a firewall breach and initiate a system-wide lockdown."],
-        correctAnswer: "C. Suspect a Distributed Denial of Service (DDoS) attack and collaborate with your Internet Service Provider (ISP) to mitigate it.",
-      },
-    ];
-
-    const questionsContainer = document.getElementById("questions");
-    const submitButton = document.getElementById("submit-button");
-    const resultsContainer = document.getElementById("results");
-
-    // Function to calculate the score and show results
-    submitButton.addEventListener("click", () => {
-      const userAnswers = [];
-      quizQuestions.forEach((quiz, index) => {
-        const selectedOption = document.querySelector(`input[name="q${index}"]:checked`);
-        if (selectedOption) {
-          userAnswers.push(selectedOption.value);
-        }
-      });
-
-      // Calculate the score
-      let score = 0;
-      userAnswers.forEach((answer, index) => {
-        if (answer === quizQuestions[index].correctAnswer) {
-          score++;
-        }
-      });
-
-      // Display the results and prompt for an email
-      resultsContainer.innerHTML = `Your score: ${score} out of ${quizQuestions.length}.<br>Enter your email: <input type="email" id="email-input"><button id="send-email">Send Email</button>`;
-      const emailInput = document.getElementById("email-input");
-      const sendEmailButton = document.getElementById("send-email");
-
-      sendEmailButton.addEventListener("click", () => {
-        const email = emailInput.value;
-        const subject = "Quiz Score";
-        const body = `Congratulations on your score of ${score} out of ${quizQuestions.length} in the quiz!`;
-
-        // Construct the email link
-        const emailLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
-        // Open the email client with the link
-        window.location.href = emailLink;
-      });
-    });
-  </script>
 </body>
 </html>
